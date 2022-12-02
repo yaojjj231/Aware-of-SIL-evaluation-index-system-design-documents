@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&lt;no title&gt; &mdash; 感知SIL评测指标体系设计文档  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="list03.html" />
+    <link rel="prev" title="1.3 通用评测指标" href="list00.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 感知SIL评测指标体系设计文档
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../test000.html">感知SIL评测的定义</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test000.html#id1">感知SIL评测指标体系</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test001.html">版本历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object00.html">指标体系的设计原则</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object11.html">一、行车动态感知目标评测任务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object01.html">1.1 什么是行车动态感知目标？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object02.html">1.2 评测逻辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list00.html">1.3 通用评测指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object04/list00.html">1.4 专项评测指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test00.html">二、行车静态感知目标评测任务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test01.html">2.1 什么是行车静态感知？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test02/list00.html">2.2 车道线评测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo00.html">三、轨迹预测评测任务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo01.html">3.1 什么是轨迹？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo02.html">3.2 什么是轨迹预测？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo03/list00.html">3.3 通用评测指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo04/list00.html">3.4 专项评测指标</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">感知SIL评测指标体系设计文档</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="list00.html">1.3 通用评测指标</a></li>
+      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/object03/list02.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>坐标系定义：采用VCS（Vehicle Coordinate System）坐标系，以自车后轴中心在地面上的投影点为原点的车辆坐标系，X代表横向（行车方向右侧垂直方向），Y代表（行车方向），示例图见下图1：</p>
+<img alt="../_images/img_0.jpg" src="../_images/img_0.jpg" />
+<p>图1 VCS坐标系定义示例</p>
+<p>距离的定义：通过轨迹关联，找到与任务检测到目标id对应的真值目标id，距离的计算是按照目标中心点据原点的距离来计算，距离的计算忽略pitch角的影响，通过tracking结果进行轨迹匹配，将每帧关联上的目标进行误差计算，距离的计算见图2：</p>
+<img alt="../_images/img_1.jpg" src="../_images/img_1.jpg" />
+<img alt="../_images/img_2.jpg" src="../_images/img_2.jpg" />
+<p>其中pred__value指预测值，gt__value指真值。</p>
+<p>图2 距离以及误差计算示意图</p>
+<img alt="../_images/img_1.png" src="../_images/img_1.png" />
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="list00.html" class="btn btn-neutral float-left" title="1.3 通用评测指标" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="list03.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright © Copyright 2022, xiaomi.com..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

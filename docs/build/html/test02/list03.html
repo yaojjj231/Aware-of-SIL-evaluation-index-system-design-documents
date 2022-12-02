@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&lt;no title&gt; &mdash; 感知SIL评测指标体系设计文档  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="list04.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="list02.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 感知SIL评测指标体系设计文档
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../test000.html">感知SIL评测的定义</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test000.html#id1">感知SIL评测指标体系</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test001.html">版本历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object00.html">指标体系的设计原则</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object11.html">一、行车动态感知目标评测任务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object01.html">1.1 什么是行车动态感知目标？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object02.html">1.2 评测逻辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object03/list00.html">1.3 通用评测指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../object04/list00.html">1.4 专项评测指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test00.html">二、行车静态感知目标评测任务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test01.html">2.1 什么是行车静态感知？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="list00.html">2.2 车道线评测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo00.html">三、轨迹预测评测任务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo01.html">3.1 什么是轨迹？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo02.html">3.2 什么是轨迹预测？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo03/list00.html">3.3 通用评测指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo04/list00.html">3.4 专项评测指标</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">感知SIL评测指标体系设计文档</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="list00.html">2.2 车道线评测</a></li>
+      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/test02/list03.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>针对拟合曲线进行点的评测和线得评测，点评测是依据语义分割模型检测结果拟合得曲线按照1m间距采样得到得点集，计算检测点和真值点距离误差，取预测线及真值线在纵轴方向0~20米、20～50米、50～100米、100～150米的点进行评测；线评测值语义分割模型检测得车道线拟合为一条三次曲线，进行线粒度得评测，主要统计整体性能，无距离分段。</p>
+<p>1. 评测对象：
+本版本评测评价目标是自车道左右两条线和自车道左左和右右两条车道线侧（参考下图示例），其中：
+HL（host left）：车辆当前行驶车道的左侧车道线
+HR（host right）：车辆当前行驶车道的右侧车道线
+NLL（neighbour left left）：相对于HL再往左的一条线
+NRR（neighbour right  right）：相对于HR再往右的一条线
+评测只统计分类正确的线：例如：对于HL，取预测线Host中HL和真值线Host中HL，若都存在且同为DASH，则参与计算。</p>
+<img alt="../_images/img1.png" src="../_images/img1.png" />
+<p>3. 取点方式介绍：
+对于预测线，算法会给出线4个系数及车道线在纵轴方向的起始位置和终止位置。根据预测的4个系数构建车道线的三次曲线表示，以纵轴为0的位置开始（若预测线的起点纵轴位置大于0，则以起点位置开始），在纵轴方向每间隔1米采样一个点，直到终止位置。对于真值线，根据真值点拟合出三次曲线，然后以纵轴为0的位置开始，在纵轴方向每间隔1米采样一个点</p>
+<p>4. 距离评测定义：
+对于真值线，标注中没有给定车道线相对于车的位置信息。车在原点（0，0）处，取车道线在纵轴为0位置的横坐标信息，该横坐标表示距离车的远近。根据距离车的远近划分出HL、HR、NLL、NRR。若车道线起点位置的纵坐标大于0且小于20米，取该线的起点坐标。若车道线起点位置的纵坐标大于20米，舍弃该车道线</p>
+<p>表3 车道线指标项汇总</p>
+<img alt="../_images/img_3.png" src="../_images/img_3.png" />
+<p>统计项：
+说明：C表示统计数据的集合，value(C,x)表示C中第x个数的值，sort(C)表示对C进行从小到大排序，floor(x)表示不大于x的整数，count(C)表示统计集合C中数据的总量，pred代表预测值，gt代表真值</p>
+<p>表4 车道线指标统计项汇总</p>
+<img alt="../_images/img_4.png" src="../_images/img_4.png" />
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="list02.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="list04.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright © Copyright 2022, xiaomi.com..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

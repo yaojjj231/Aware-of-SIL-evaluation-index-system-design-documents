@@ -1,0 +1,5 @@
+简称,全称,单位,公式,定义
+MR,漏检率,,count(minFDE_j >2)/ N其中j=1，2，...，N$$，N表示被预测对象的个数,N个障碍物中minFDE大于2米的预测结果所占比例
+minADE quantile,最小平均距离误差的四分位数,米,value(sort(abs(minADE_j))，m_i)其中m_i=floor(n*0.25*i)，i = 1，2，3，4,N个被预测对象的minADE指标的四分位数
+minFDE  quantile,最小终点距离误差的四分位数,米,value(sort(abs(minFDE_j))，m_i),N个被预测对象的minFDE指标的四分位数
+KFE_quantile,关键帧距离误差的四分位数,米,value(sort(abs(minKFE_j))，m_i),N个被预测对象的KFE指标的四分位数

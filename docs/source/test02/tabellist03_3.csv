@@ -1,0 +1,18 @@
+统计项,单位,公式,定义,备注
+点评测：以下为按点均值误差小于指定阈值的比例
+Sample Points sum,个,n = count(采样点集合),参与指标计算（过滤后的）车道线采样点数目
+Aerage Error(m),m,(\sum_{\mathclap{1\le i\le n}} e_{i})/n，其中e代表第i个采样点的误差,参与计算的车道线，按纵向距离分段，取其中采样点统计累积误差，累计误差均值作为Average error。
+96 Percentile Error (m),m,value(sort(abs(C))，m)，其中m=floor(n*0.96),将误差由小到大排序后输入96百分比对应的值，取值为不大于该百分比位置对应的值
+9976 Percentile Error (m),m,value(sort(abs(C))，m)，其中m=floor(n*0.9976),将误差由小到大排序后输入99.76百分比对应的值，取值为不大于该百分比位置对应的值
+Ratio(Error<7.5cm),%,count(if abs(C)<7.5)/n，C={e_1，e_2，...，e_n},横向误差符合<7.5cm的统计点数所占总统计点数的比例
+Ratio(Error<20cm),%,count(if abs(C)<20)/n，C={e_1，e_2，...，e_n},目标误差符合<20cm的统计点数所占总统计点数的比例
+Ratio(Error<40cm),%,count(if abs(C)<40)/n，C={e_1，e_2，...，e_n},目标误差符合<40cm的统计数所占总统计数的比例
+线评测：以下为按线均值误差小于指定阈值的比例
+Frames sum,,count(车道线条数),参与指标计算（过滤后的）车道线数目
+Percentage of Error<20cm,%,count(if abs(C)<20)/n，C={e_1，e_2，...，e_n},横向误差符合<0.2m的统计数所占总统计数的百分比，认为统计值越大代表效果越好
+Percentage of Error<40cm,%,count(if abs(C)<40)/n，C={e_1，e_2，...，e_n},横向误差符合<0.4m的统计数所占总统计数的百分比，认为统计值越大代表效果越好
+Percentage of Error>50cm,%,count(if abs(C)>50)/n，C={e_1，e_2，...，e_n},横向误差符合>0.5m的统计数所占总统计数的百分比，认为统计值越小代表效果越好
+Standard,,\sqrt{\frac{1}{N}\displaystyle\sum_{i=1}^n(x_i-\mu)^2},横向误差的标准差，用于表征稳定性
+9976 percentile error,m,value(sort(abs(C))，m)，其中m=floor(n*0.9976),将误差由小到大排序后输入99.76百分比对应的值，取值为不大于该百分比位置对应的值
+Sum,hour,,满足筛选条件且匹配上GT的参与统计的车道线测评的时长
+RMSE(Root Mean Square Error),,\sqrt{\frac{1}{N}\displaystyle\sum_{i=1}^n(pred_{C_N}-gt_{C_N})^2}，其中N=0，1，2，3,均方根误差，统计依据检测车道线点拟合的三次曲线系数波动情况

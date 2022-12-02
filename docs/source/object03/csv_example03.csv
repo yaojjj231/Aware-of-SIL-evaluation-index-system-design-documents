@@ -1,0 +1,14 @@
+简称,全称,公式,定义
+avg,Average,$$(\sum_{\mathclap{1\le i\le n}} e_{i})/n，其中e_i代表第i个采样点的误差$$,指标项的平均值
+avgabs,Average ABS,$$(\sum_{\mathclap{1\le i\le n}} abs(e_{i}))/n,其中e_i代表第i个采样点的误差$$，指标项绝对值的平均值
+std,Standard Deviation,$$\sqrt{\frac{1}{N}\displaystyle\sum_{i=1}^n(x_i-\mu)^2}$$,指标项的标准差，用于表征稳定性
+pct50,50 Percentile Error,$$value(sort(abs(C))，m)，其中m=floor(n*0.5) $$,指标项绝对值从小到大排序后，输入50百分比对应的值，取值为不大于该百分比位置对应的值
+pct90,90 Percentile Error,$$value(sort(abs(C))，m)，其中m=floor(n*0.90) $$,指标项绝对值从小到大排序后，输入90百分比对应的值，取值为不大于该百分比位置对应的值
+pct95,95 Percentile Error,$$value(sort(abs(C))，m)，其中m=floor(n*0.95) $$,指标项绝对值从小到大排序后，输入95百分比对应的值，取值为不大于该百分比位置对应的值
+
+
+
+
+
+
+

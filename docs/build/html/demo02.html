@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.2 什么是轨迹预测？ &mdash; 感知SIL评测指标体系设计文档  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3.3 通用评测指标" href="demo03/list00.html" />
+    <link rel="prev" title="3.1 什么是轨迹？" href="demo01.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> 感知SIL评测指标体系设计文档
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="test000.html">感知SIL评测的定义</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test000.html#id1">感知SIL评测指标体系</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test001.html">版本历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object00.html">指标体系的设计原则</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object11.html">一、行车动态感知目标评测任务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object01.html">1.1 什么是行车动态感知目标？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object02.html">1.2 评测逻辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object03/list00.html">1.3 通用评测指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object04/list00.html">1.4 专项评测指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test00.html">二、行车静态感知目标评测任务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test01.html">2.1 什么是行车静态感知？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test02/list00.html">2.2 车道线评测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo00.html">三、轨迹预测评测任务</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo01.html">3.1 什么是轨迹？</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3.2 什么是轨迹预测？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo03/list00.html">3.3 通用评测指标</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo04/list00.html">3.4 专项评测指标</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">感知SIL评测指标体系设计文档</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">3.2 什么是轨迹预测？</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/demo02.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>3.2 什么是轨迹预测？<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<p>轨迹预测是针对被预测对象（轨迹对象），通过其过去X秒的障碍物历史轨迹来预测其未来Y秒的行动轨迹。前置依赖项为感知OD识别结果、高精地图、定位信息和车道线（可选项）等。为了让指标体系更加结构化和更多的复用，需要对整个体系进行分层设计，总体上可以分为4个层级：</p>
+<ol class="arabic simple">
+<li><p>被测对象：小客车、大卡车、双轮车、行人等</p></li>
+<li><p>场景：白天、夜晚、高速、城区、CIPV、十字路口、环岛、匝道等多个维度的交叉组合</p></li>
+<li><p>误差变量(指标项)：感知任务的某个输出量(Predicted Value)与真实量(Ground Truth Value)之间的偏差，可以是绝对偏差(两者相减)，也可以是相对偏差或者更复杂的偏差表示。理论上可以是二者的任意函数，统计学意义上它是一个随机变量。</p></li>
+<li><p>样本统计量(统计项)：误差变量作为随机变量是一种数学抽象，但我们不可能准确的参数化表达这个随机变量，所以每次的评测可以看做是对随机变量的采样行为。在感知的版本、任务、场景库、误差变量都唯一确定的情况下，每次评测我们会获得一定数量的独立同分布的样本。统计项是我们对这个样本集合理设计的统计量，来反应我们关心的性能表现，比如均值、标准差、最大值、百分位值等。</p></li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="demo01.html" class="btn btn-neutral float-left" title="3.1 什么是轨迹？" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="demo03/list00.html" class="btn btn-neutral float-right" title="3.3 通用评测指标" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright © Copyright 2022, xiaomi.com..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

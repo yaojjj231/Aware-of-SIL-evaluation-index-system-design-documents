@@ -1,0 +1,5 @@
+指标项,定义
+中心距离匹配<4m,\sqrt{DX^2+DY^2}\le4m
+IOU≥0.5,\frac {A\bigcap B} {A\bigcup B} \ge 0.5，其中A代表预测3D框，B代表真值3D框
+速度方向误差,sign(pred) \ne sign(gt)，其中sign(A)代表A的正负符号
+速度方向误差,目标检测的动静态label与真值标注label一致
